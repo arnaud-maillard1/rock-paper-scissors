@@ -55,6 +55,6 @@ class Shaft:
             r"./images/b10.png")
         self.rect = self.image.get_rect(topleft=self.position)
 
-    def draw_scissors(self):
+    def draw_shaft(self):
         # draw hands in screen
         self.screen.blit(self.image, self.position)
