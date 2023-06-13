@@ -51,7 +51,7 @@ class Scissors:
         # draw hands in screen
         self.screen.blit(self.image, self.position)
 
-class Shaft:
+class Well :
     def __init__(self, screen):
         self.screen = screen
         self.position = (REF_POSITION[0]+SPACE_BTW_BUTTON, REF_POSITION[1])
@@ -61,6 +61,6 @@ class Shaft:
             r"./images/b10.png")
         self.rect = self.image.get_rect(topleft=self.position)
 
-    def draw_shaft(self):
+    def draw_well(self):
         # draw hands in screen
         self.screen.blit(self.image, self.position)

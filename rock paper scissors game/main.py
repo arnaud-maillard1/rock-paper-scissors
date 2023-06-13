@@ -5,7 +5,7 @@ import time
 
 # import my class
 from hands import (Player, Enemy)
-from button import (Rock, Paper, Scissors, Shaft)
+from button import (Rock, Paper, Scissors, Well)
 from game_function import Test
 from text import Img_text
 from score import Score
@@ -20,7 +20,7 @@ bg = pygame.image.load(r"./images/bg.jpg")
 
 screen = pygame.display.set_mode(
     (600, 500))
-pygame.display.set_caption("Rock Paper Scissors Shaft Game ")
+pygame.display.set_caption("Rock Paper Scissors Well Game ")
 
 
 choice_player = 2
@@ -35,7 +35,7 @@ img_text = Img_text(screen)
 b_rock = Rock(screen)
 b_paper = Paper(screen)
 b_scissors = Scissors(screen)
-b_shaft = Shaft(screen)
+b_well = Well(screen)
 
 # start the main loop for the game
 while True:
@@ -63,7 +63,7 @@ while True:
                     choice_player = 2
                 elif b_scissors.rect.collidepoint(mouse_x, mouse_y):
                     choice_player = 3
-                elif b_shaft.rect.collidepoint(mouse_x, mouse_y):
+                elif b_well.rect.collidepoint(mouse_x, mouse_y):
                     choice_player = 10
 
     # start to test
@@ -93,7 +93,7 @@ while True:
     b_rock.draw_rock()
     b_paper.draw_paper()
     b_scissors.draw_scissors()
-    b_shaft.draw_shaft()
+    b_well.draw_well()
 
     # draw label and score
     img_text.label_click()
