@@ -1,6 +1,7 @@
 import sys
 import pygame
 from random import choice
+from random import seed
 import time
 
 # import my class
@@ -70,11 +71,13 @@ while True:
     if game_active:
         if not choice_player:
             #randomly draw enemy hands
+            seed(time.time())
             enemy_hand = choice([1, 2, 3, 10])
             choice_enemy = enemy_hand
             time.sleep(.05)
         else:
             #makes the enemy unselect based on the previous image
+            seed(time.time())
             choice_enemy = choice([1, 2, 3, 10])
             test = Test(screen, choice_player, choice_enemy)
             text_play = test.get_result()
