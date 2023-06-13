@@ -93,6 +93,7 @@ while True:
     b_rock.draw_rock()
     b_paper.draw_paper()
     b_scissors.draw_scissors()
+    b_shaft.draw_shaft()
 
     # draw label and score
     img_text.label_click()
