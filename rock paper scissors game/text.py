@@ -14,7 +14,7 @@ class Img_text:
     def get_start(self, images):
         self.images = images
         self.image = pygame.image.load(
-            "rock paper scissors game\\images\\" + self.images+".png")
+            "./images/" + self.images+".png")
         self.image_rect = self.image.get_rect()
         self.image_rect.center = self.screen.get_rect().center
         self.image_rect.top = 210

@@ -15,7 +15,7 @@ class Player():
     def draw_player(self, images):
         # load image
         self.image = pygame.image.load(
-            r"rock paper scissors game\images\hand"+str(images)+".png")
+            r"./images/hand"+str(images)+".png")
         # draw hands in screen
         self.screen.blit(self.image, self.position)
 
@@ -30,7 +30,7 @@ class Enemy():
     def draw_enemy(self, num_img):
         # load image
         self.image = pygame.image.load(
-            r"rock paper scissors game\images\hand"+str(num_img)+".png")
+            r"./images/hand"+str(num_img)+".png")
         self.image = pygame.transform.rotate(self.image, 180)
         # draw hands in screen
         self.screen.blit(self.image, self.position)

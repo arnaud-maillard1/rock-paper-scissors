@@ -11,7 +11,7 @@ class Rock:
         self.position = (187, 392)
         # load image
         self.image = pygame.image.load(
-            r"rock paper scissors game\images\b1.png")
+            r"./images/b1.png")
         self.rect = self.image.get_rect(topleft=self.position)
 
     def draw_rock(self):
@@ -25,7 +25,7 @@ class Paper:
         self.position = (267, 392)
         # load image
         self.image = pygame.image.load(
-            r"rock paper scissors game\images\b2.png")
+            r"./images/b2.png")
         self.rect = self.image.get_rect(topleft=self.position)
 
     def draw_paper(self):
@@ -39,7 +39,7 @@ class Scissors:
         self.position = (347, 392)
         # load image
         self.image = pygame.image.load(
-            r"rock paper scissors game\images\b3.png")
+            r"./images/b3.png")
         self.rect = self.image.get_rect(topleft=self.position)
 
     def draw_scissors(self):

@@ -15,7 +15,7 @@ from score import Score
 pygame.init()
 
 # create bacgkround
-bg = pygame.image.load(r"rock paper scissors game\images\bg.jpg")
+bg = pygame.image.load(r"./images/bg.jpg")
 
 
 screen = pygame.display.set_mode(
