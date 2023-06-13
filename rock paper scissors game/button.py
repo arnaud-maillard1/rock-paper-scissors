@@ -4,11 +4,14 @@ import pygame
 This class serves to draw the hand selection button for the player
 """
 
+REF_POSITION = (307, 392)
+SPACE_BTW_BUTTON = 80
 
 class Rock:
     def __init__(self, screen):
         self.screen = screen
-        self.position = (187, 392)
+        self.position = (REF_POSITION[0]-2*SPACE_BTW_BUTTON, REF_POSITION[1])
+        
         # load image
         self.image = pygame.image.load(
             r"./images/b1.png")
@@ -22,7 +25,8 @@ class Rock:
 class Paper:
     def __init__(self, screen):
         self.screen = screen
-        self.position = (267, 392)
+        self.position = (REF_POSITION[0]-SPACE_BTW_BUTTON, REF_POSITION[1])
+        
         # load image
         self.image = pygame.image.load(
             r"./images/b2.png")
@@ -36,7 +40,8 @@ class Paper:
 class Scissors:
     def __init__(self, screen):
         self.screen = screen
-        self.position = (347, 392)
+        self.position = (REF_POSITION[0], REF_POSITION[1])
+    
         # load image
         self.image = pygame.image.load(
             r"./images/b3.png")
@@ -49,7 +54,8 @@ class Scissors:
 class Shaft:
     def __init__(self, screen):
         self.screen = screen
-        self.position = (427, 392)
+        self.position = (REF_POSITION[0]+SPACE_BTW_BUTTON, REF_POSITION[1])
+        
         # load image
         self.image = pygame.image.load(
             r"./images/b10.png")
