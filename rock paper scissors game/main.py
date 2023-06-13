@@ -5,7 +5,7 @@ import time
 
 # import my class
 from hands import (Player, Enemy)
-from button import (Rock, Paper, Scissors)
+from button import (Rock, Paper, Scissors, Shaft)
 from game_function import Test
 from text import Img_text
 from score import Score
@@ -20,7 +20,7 @@ bg = pygame.image.load(r"./images/bg.jpg")
 
 screen = pygame.display.set_mode(
     (600, 500))
-pygame.display.set_caption("Rock Paper Scissors Game ")
+pygame.display.set_caption("Rock Paper Scissors Shaft Game ")
 
 
 choice_player = 2
@@ -35,6 +35,7 @@ img_text = Img_text(screen)
 b_rock = Rock(screen)
 b_paper = Paper(screen)
 b_scissors = Scissors(screen)
+b_shaft = Shaft(screen)
 
 # start the main loop for the game
 while True:
@@ -62,17 +63,19 @@ while True:
                     choice_player = 2
                 elif b_scissors.rect.collidepoint(mouse_x, mouse_y):
                     choice_player = 3
+                elif b_shaft.rect.collidepoint(mouse_x, mouse_y):
+                    choice_player = 10
 
     # start to test
     if game_active:
         if not choice_player:
             #randomly draw enemy hands
-            enemy_hand = choice([1, 2, 3])
+            enemy_hand = choice([1, 2, 3, 10])
             choice_enemy = enemy_hand
             time.sleep(.05)
         else:
             #makes the enemy unselect based on the previous image
-            choice_enemy = choice([1, 2, 3])
+            choice_enemy = choice([1, 2, 3, 10])
             test = Test(screen, choice_player, choice_enemy)
             text_play = test.get_result()
             score.get_score(text_play)

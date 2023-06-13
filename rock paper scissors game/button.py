@@ -45,3 +45,16 @@ class Scissors:
     def draw_scissors(self):
         # draw hands in screen
         self.screen.blit(self.image, self.position)
+
+class Shaft:
+    def __init__(self, screen):
+        self.screen = screen
+        self.position = (427, 392)
+        # load image
+        self.image = pygame.image.load(
+            r"./images/b10.png")
+        self.rect = self.image.get_rect(topleft=self.position)
+
+    def draw_scissors(self):
+        # draw hands in screen
+        self.screen.blit(self.image, self.position)
